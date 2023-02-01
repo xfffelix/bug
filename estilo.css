@@ -1,0 +1,53 @@
+body{
+  background-color: black;
+  display: flex;
+  margin-top: 100px;
+  overflow:unset;
+}
+
+.container{
+	margin-top: 20;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	overflow:visible;
+}
+
+	
+div{
+	margin: 22px;
+	overflow: visible;
+	animation: bounce 1.8s, ease-in-out infinite alternate;
+	opacity: 0.5;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+	border: 0px solid rgb(206, 218, 230);
+}
+    
+div:hover{
+
+	animation: hover 1.5s ease-in-out infinite alternate;
+	opacity: 100;}
+  	
+	@keyframes hover {
+	100% { transform: scale3d(1.2,1.2,1.2); border: 1px solid rgb(206, 218, 230)};
+}
+
+
+  	@keyframes bounce{
+		from { transform: translate3d(10 0, 0, 20);	animation-delay: 0.1s}
+		to { transform: translate3d(220, 200px, 0);}
+	}
+
+	  
+	@-webkit-keyframes bounce{
+		from {
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(10, 10, 0);
+		}
+		to {
+			-webkit-transform: translate3d(0, 200px, 0);
+			transform: translate3d(0, 150px, 0);
+		
+		}
+	}
